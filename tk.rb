@@ -9,7 +9,7 @@ require 'pry'
 agent = Mechanize.new
 agent.get("http://www.taxidromikoskodikas.gr/")
 
-Write all areas to a .txt file
+# Write all areas to a .txt file
 areas = []
 agent.page.search("#perioxes_id table td a").each do |link|
   areas << link.text
